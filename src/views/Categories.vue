@@ -4,18 +4,18 @@
     <!-- Tampilkan daftar kategori -->
     <table class="table">
       <thead>
-      <tr>
+      <tr class="table-secondary">
         <th>Code</th>
         <th>Categories</th>
         <th>Action</th>
       </tr>
       </thead>
-      <tbody>
+      <tbody class="table-light">
       <tr v-for="category in categories" :key="category.id">
         <td>{{ category.kode }}</td>
         <td>{{ category.kategori }}</td>
         <td>
-          <router-link :to="`/categories/${category.kode}`" class="btn btn-primary">Edit</router-link>
+          <router-link :to="`/categories/${category.kode}`" class="btn btn-info">Edit</router-link>
           <button @click="deleteCategory(category.kode)" class="btn btn-danger">Delete</button>
         </td>
       </tr>

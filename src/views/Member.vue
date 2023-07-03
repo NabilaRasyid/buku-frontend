@@ -9,7 +9,7 @@
         <!-- Tampilkan seluruh anggota -->
         <table class="table">
             <thead>
-            <tr>
+            <tr class="table-secondary">
                 <th>Nomor</th>
                 <th>Nama</th>
                 <th>Jenis Kelamin</th>
@@ -19,7 +19,7 @@
                 <th>Aksi</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody class="table-light">
             <tr v-for="anggota in anggotaList" :key="anggota.id">
                 <td>{{ anggota.nomor }}</td>
                 <td>{{ anggota.nama }}</td>
@@ -28,7 +28,7 @@
                 <td>{{ anggota.no_hp }}</td>
                 <td>{{ anggota.tanggal_terdaftar }}</td>
                 <td>
-                    <button class="btn btn-primary" @click="editAnggota(anggota)">Edit</button>
+                    <button class="btn btn-info" @click="editAnggota(anggota)">Edit</button>
                     <button class="btn btn-danger" @click="hapusAnggota(anggota.nomor)">Hapus</button>
                 </td>
             </tr>

@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Books from '../views/Books.vue'
 import Categories from '../views/Categories.vue';
-import Member from "@/views/Member.vue";
+import Member from '../views/Member.vue';
+import Desc from '../views/Desc.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -25,6 +26,11 @@ const router = createRouter({
       path: '/member',
       name: 'Member',
       component: Member,
+    },
+    {
+      path: '/desc',
+      name: 'Desc',
+      component: Desc,
     },
     {
       path: '/about',

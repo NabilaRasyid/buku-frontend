@@ -1,11 +1,11 @@
 <template>
   <div>
     <h1>Book Store</h1>
-    <router-link to="/books/add" class="btn btn-primary">Add Book</router-link>
+    <router-link to="/books/add" class="btn btn-success">Add Book</router-link>
 
     <table class="table">
       <thead>
-      <tr>
+      <tr class="table-secondary">
         <th>Code</th>
         <th>Title</th>
         <th>Author</th>
@@ -15,7 +15,7 @@
         <th>Action</th>
       </tr>
       </thead>
-      <tbody>
+      <tbody class="table-light">
       <tr v-for="book in books" :key="book.id">
         <td>{{ book.kode }}</td>
         <td>{{ book.judul }}</td>
@@ -24,7 +24,7 @@
         <td>{{ book.tahun }}</td>
         <td>{{ book.harga }}</td>
         <td>
-          <router-link :to="`/books/edit/${book.kode}`" class="btn btn-primary">Edit</router-link>
+          <router-link :to="`/books/edit/${book.kode}`" class="btn btn-info">Edit</router-link>
           <button @click="deleteBook(book.kode)" class="btn btn-danger">Delete</button>
         </td>
       </tr>
